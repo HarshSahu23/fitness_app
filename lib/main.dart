@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+import './Pages/Workout/mainWorkout.dart';
+import './Pages/Diet.dart';
+import './Pages/Meditate.dart';
+import 'Pages/HomePage.dart';
+import './Pages/Yoga.dart';
+import './Pages/Workout/testmainWorkout.dart';
+
 void main(List<String> args) {
   runApp(MyNavigation());
 }
@@ -19,6 +26,8 @@ class _MyNavigationState extends State<MyNavigation> {
     });
   }
 
+  final pages = [Yoga(), Meditate(), HomePage(), testHomePage(), Diet()];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,7 +36,7 @@ class _MyNavigationState extends State<MyNavigation> {
           title: const Text(
             "Amble - The Fitness App",
           ),
-          leading: const Icon(Icons.menu),
+          // leading: IconButton(onPressed: onPressed, icon: icon),
           actions: <Widget>[
             IconButton(
                 onPressed: () => {print("pressed settings ")},
@@ -37,7 +46,49 @@ class _MyNavigationState extends State<MyNavigation> {
                 icon: const Icon(Icons.notifications))
           ],
         ),
-        body: const Center(child: Text("Working")),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                child: Container(
+                  child: const Center(
+                      child: Text(
+                    "Hello Harsh !",
+                    style: TextStyle(
+                      color: Colors.purple,
+                      fontSize: 50,
+                    ),
+                  )),
+                ),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(3), color: Colors.blue),
+              ),
+              ListTile(
+                title: const Text("Menu Item 1"),
+                onTap: () {
+                  print("tapped 1");
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: const Text("Menu Item 2"),
+                onTap: () {
+                  print("tapped 2");
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: const Text("Menu Item 2"),
+                onTap: () {
+                  print("tapped 2");
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
+        ),
+        body: pages[_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
@@ -47,7 +98,7 @@ class _MyNavigationState extends State<MyNavigation> {
                   width: 40,
                 ),
                 label: "Yoga",
-                backgroundColor: Colors.purple[200]),
+                backgroundColor: Colors.lightGreen[400]),
             BottomNavigationBarItem(
                 icon: SizedBox(
                   child: Image.asset('assets/Icons/meditation.png'),
@@ -55,7 +106,15 @@ class _MyNavigationState extends State<MyNavigation> {
                   width: 40,
                 ),
                 label: "Meditate",
-                backgroundColor: Colors.grey[600]),
+                backgroundColor: Colors.indigo[400]),
+            BottomNavigationBarItem(
+                icon: SizedBox(
+                  child: Image.asset('assets/Icons/home.png'),
+                  height: 40,
+                  width: 40,
+                ),
+                label: "Home",
+                backgroundColor: Colors.blue[400]),
             BottomNavigationBarItem(
                 icon: SizedBox(
                   child: Image.asset('assets/Icons/workout.png'),
@@ -63,7 +122,7 @@ class _MyNavigationState extends State<MyNavigation> {
                   width: 40,
                 ),
                 label: "Fitness",
-                backgroundColor: Colors.blueAccent[200]),
+                backgroundColor: Colors.teal[300]),
             BottomNavigationBarItem(
                 icon: SizedBox(
                   child: Image.asset('assets/Icons/diet.png'),
