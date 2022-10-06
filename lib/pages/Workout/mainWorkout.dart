@@ -7,7 +7,7 @@ import 'colors.dart' as color;
 import 'package:flutter/material.dart';
 
 class WorkoutPage extends StatefulWidget {
-  const WorkoutPage({Key? key}) : super(key: key);
+  // const WorkoutPage({Key? key}) : super(key: key);
 
   @override
   State<WorkoutPage> createState() => _WorkoutPageState();

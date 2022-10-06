@@ -19,7 +19,7 @@ import 'WorkoutTypes/LegsWorkout.dart';
 import 'WorkoutTypes/BackWorkout.dart';
 
 class testHomePage extends StatefulWidget {
-  const testHomePage({Key? key}) : super(key: key);
+  // const testHomePage({Key? key}) : super(key: key);
 
   @override
   State<testHomePage> createState() => _testHomePageState();
@@ -39,39 +39,23 @@ class _testHomePageState extends State<testHomePage> {
     _initData();
   }
 
-  void navigateToNextScreen(BuildContext context, String workoutType) {
-    switch (workoutType) {
-      case "Chest":
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => const ChestWorkout()));
-        break;
-      case "Core":
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => const CoreWorkout()));
-        break;
-      case "Arms":
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => const ArmsWorkout()));
-        break;
-      case "Thigh":
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => const ThighWorkout()));
-        break;
-      case "Legs":
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => const LegsWorkout()));
-        break;
-      case "Back":
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => const BackWorkout()));
-        break;
-      default:
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Amble - The Fitness App",
+        ),
+        // leading: IconButton(onPressed: onPressed, icon: icon),
+        actions: <Widget>[
+          IconButton(
+              onPressed: () => {print("pressed settings ")},
+              icon: const Icon(Icons.settings)),
+          IconButton(
+              onPressed: () => {print("pressed notification")},
+              icon: const Icon(Icons.notifications))
+        ],
+      ),
       backgroundColor: color.AppColor.homePageBackground,
       body: Container(
         padding:
@@ -99,7 +83,7 @@ class _testHomePageState extends State<testHomePage> {
                     size: 20, color: color.AppColor.homePageIcons),
               ],
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Row(
               children: [
                 Text(
@@ -238,19 +222,19 @@ class _testHomePageState extends State<testHomePage> {
                   Column(
                     children: [
                       Row(
-                        children: const [
+                        children: [
                           backWorkoutCard(),
                           armsWorkoutCard(),
                         ],
                       ),
                       Row(
-                        children: const [
+                        children: [
                           chestWorkoutCard(),
                           legsWorkoutCard(),
                         ],
                       ),
                       Row(
-                        children: const [
+                        children: [
                           coreWorkoutCard(),
                           thighWorkoutCard(),
                         ],

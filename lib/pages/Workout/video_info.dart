@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'colors.dart' as color;
 
 class VideoInfo extends StatefulWidget {
-  const VideoInfo({Key? key}) : super(key: key);
+  // const VideoInfo({Key? key}) : super(key: key);
 
   @override
   State<VideoInfo> createState() => _VideoInfoState();

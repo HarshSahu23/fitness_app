@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.16.1 <3.0.0"
+  sdk: ">=2.1.0 <3.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -78,6 +78,42 @@ flutter:
     - assets/squat3.jpg
     - assets/squat4.jpg
 
+    - assets/concentrationcurl.png
+    - assets/inclinebicepcurl.png
+    - assets/pronedumbbellspidercurl.png
+    - assets/reversecurlstraightbar.png
+    - assets/twisteddumbbellcurl.png
+    - assets/underhandseatedrow.png
+
+    - assets/InclineBicepCurl.gif
+    - assets/ConcentrationCurl.gif
+    - assets/ProneDumbbellSpiderCurl.gif
+    - assets/ReverseCurlStraighBar.gif
+    - assets/TwistedDumbbellCurl.gif
+    - assets/UnderHandSeatedRow.gif
+
+    - assets/superman.png
+    - assets/pullup.png
+    - assets/kettlebellswings.png
+    - assets/invertedrow.png
+    - assets/farmerswalk.png
+    - assets/barbelldeadlift.png
+
+    - assets/Superman.gif
+    - assets/Pullup.gif
+    - assets/KettleBellSwings.gif
+    - assets/InvertedRow.gif
+    - assets/FarmersWalk.gif
+    - assets/BarbellDeadlift.gif
+
+    - assets/ChestWorkout/
+    - assets/ArmsWorkout/
+    - assets/ArmsWorkout/statics/inclinebicepcurl.png
+    - assets/BackWorkout/
+    - assets/CoreWorkout/coreUseOnCard.png
+    - assets/LegsWorkout/
+    - assets/ThighWorkout/
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
@@ -89,17 +125,23 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway-Regular.ttf
+        - asset: assets/fonts/Raleway-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Raleway-Black.ttf
+          weight: 900
+    - family: RobotoCondensed
+      fonts:
+        - asset: assets/fonts/RobotoCondensed-Regular.ttf
+        - asset: assets/fonts/RobotoCondensed-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/RobotoCondensed-Light.ttf
+          weight: 300
+        - asset: assets/fonts/RobotoCondensed-Italic.ttf
+          style: italic
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

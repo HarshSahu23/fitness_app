@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
 import './Pages/Workout/mainWorkout.dart';
-import './Pages/Diet.dart';
 import './Pages/Meditate.dart';
-import 'Pages/HomePage.dart';
+import 'Pages/HomePage/HomePage.dart';
 import './Pages/Yoga.dart';
 import './Pages/Workout/testmainWorkout.dart';
+import 'Pages/Diet/DietMain.dart';
 
 void main(List<String> args) {
   runApp(MyNavigation());
 }
 
 class MyNavigation extends StatefulWidget {
-  const MyNavigation({Key? key}) : super(key: key);
+  // const MyNavigation({Key? key}) : super(key: key);
   @override
   State<MyNavigation> createState() => _MyNavigationState();
 }
@@ -26,26 +26,26 @@ class _MyNavigationState extends State<MyNavigation> {
     });
   }
 
-  final pages = [Yoga(), Meditate(), HomePage(), testHomePage(), Diet()];
+  final pages = [Yoga(), Meditate(), HomePage(), testHomePage(), dietMain()];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            "Amble - The Fitness App",
-          ),
-          // leading: IconButton(onPressed: onPressed, icon: icon),
-          actions: <Widget>[
-            IconButton(
-                onPressed: () => {print("pressed settings ")},
-                icon: const Icon(Icons.settings)),
-            IconButton(
-                onPressed: () => {print("pressed notification")},
-                icon: const Icon(Icons.notifications))
-          ],
-        ),
+        // appBar: AppBar(
+        //   title: const Text(
+        //     "Amble - The Fitness App",
+        //   ),
+        //   // leading: IconButton(onPressed: onPressed, icon: icon),
+        //   actions: <Widget>[
+        //     IconButton(
+        //         onPressed: () => {print("pressed settings ")},
+        //         icon: const Icon(Icons.settings)),
+        //     IconButton(
+        //         onPressed: () => {print("pressed notification")},
+        //         icon: const Icon(Icons.notifications))
+        //   ],
+        // ),
         drawer: Drawer(
           child: ListView(
             padding: EdgeInsets.zero,

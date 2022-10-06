@@ -3,19 +3,21 @@ import '../colors.dart' as color;
 import './navigateToNextScreen.dart';
 
 class armsWorkoutCard extends StatelessWidget {
-  const armsWorkoutCard({Key? key}) : super(key: key);
+  // const armsWorkoutCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: (MediaQuery.of(context).size.width - 90) / 2,
-      height: 140,
-      margin: const EdgeInsets.only(top: 15, bottom: 15, left: 10),
-      padding: const EdgeInsets.only(left: 3, bottom: 5),
+      height: 145,
+      margin: const EdgeInsets.only(
+        top: 15,
+        bottom: 15,
+      ),
+      padding: const EdgeInsets.only(bottom: 5),
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(15),
-          image: const DecorationImage(image: AssetImage("assets/ex4.png")),
           boxShadow: [
             BoxShadow(
                 blurRadius: 3,
@@ -26,18 +28,37 @@ class armsWorkoutCard extends StatelessWidget {
                 offset: const Offset(-5, -5),
                 color: color.AppColor.gradientSecond.withOpacity(0.1))
           ]),
-      child: InkWell(
-        onTap: () {
-          navigateToNextScreen(context, "Arms");
-        },
-        child: Center(
-          child: Align(
-            alignment: Alignment.bottomCenter,
-            child: Text("Arms",
-                style: TextStyle(
-                    fontSize: 20, color: color.AppColor.homePageDetail)),
+      child: Column(
+        children: [
+          InkWell(
+            onTap: () {
+              navigateToNextScreen(context, "Arms");
+            },
+            child: Container(
+                height: 100,
+                margin: const EdgeInsets.only(top: 10),
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image:
+                          AssetImage("assets/ArmsWorkout/armsUseOnCard.png")),
+                )),
           ),
-        ),
+          InkWell(
+            onTap: () {
+              navigateToNextScreen(context, "Arms");
+            },
+            child: const Center(
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Text("Arms",
+                    style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black)),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

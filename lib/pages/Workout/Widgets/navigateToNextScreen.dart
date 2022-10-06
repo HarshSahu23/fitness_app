@@ -11,27 +11,27 @@ void navigateToNextScreen(BuildContext context, String workoutType) {
   switch (workoutType) {
     case "Chest":
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const ChestWorkout()));
+          .push(MaterialPageRoute(builder: (context) => ChestWorkout()));
       break;
     case "Core":
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const CoreWorkout()));
+          .push(MaterialPageRoute(builder: (context) => CoreWorkout()));
       break;
     case "Arms":
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const ArmsWorkout()));
+          .push(MaterialPageRoute(builder: (context) => ArmsWorkout()));
       break;
     case "Thigh":
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const ThighWorkout()));
+          .push(MaterialPageRoute(builder: (context) => ThighWorkout()));
       break;
     case "Legs":
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const LegsWorkout()));
+          .push(MaterialPageRoute(builder: (context) => LegsWorkout()));
       break;
     case "Back":
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const BackWorkout()));
+          .push(MaterialPageRoute(builder: (context) => BackWorkout()));
       break;
     default:
   }
