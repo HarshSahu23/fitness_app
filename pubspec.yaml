@@ -29,6 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  percent_indicator: ^4.0.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -77,6 +78,8 @@ flutter:
     - assets/squat2.jpg
     - assets/squat3.jpg
     - assets/squat4.jpg
+    - assets/steps.png
+    - assets/sun.png
 
     - assets/concentrationcurl.png
     - assets/inclinebicepcurl.png

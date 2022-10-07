@@ -1,0 +1,6 @@
+"assets/Superman.gif",
+"assets/Pullup.gif",
+"assets/KettleBellSwings.gif",
+"assets/InvertedRow.gif",
+"assets/FarmersWalk.gif",
+"assets/BarbellDeadlift.gif",

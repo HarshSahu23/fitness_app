@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import './Pages/Workout/mainWorkout.dart';
-import './Pages/Meditate.dart';
 import 'Pages/HomePage/HomePage.dart';
 import './Pages/Yoga.dart';
 import './Pages/Workout/testmainWorkout.dart';
@@ -18,7 +17,7 @@ class MyNavigation extends StatefulWidget {
 }
 
 class _MyNavigationState extends State<MyNavigation> {
-  int _selectedIndex = 2;
+  int _selectedIndex = 1;
 
   void onSelectedItem(int index) {
     setState(() {
@@ -26,11 +25,12 @@ class _MyNavigationState extends State<MyNavigation> {
     });
   }
 
-  final pages = [Yoga(), Meditate(), HomePage(), testHomePage(), dietMain()];
+  final pages = [Yoga(), HomePage(), testHomePage(), dietMain()];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         // appBar: AppBar(
         //   title: const Text(
@@ -65,21 +65,21 @@ class _MyNavigationState extends State<MyNavigation> {
                     borderRadius: BorderRadius.circular(3), color: Colors.blue),
               ),
               ListTile(
-                title: const Text("Menu Item 1"),
+                title: const Text("Open Workout"),
                 onTap: () {
                   print("tapped 1");
                   Navigator.pop(context);
                 },
               ),
               ListTile(
-                title: const Text("Menu Item 2"),
+                title: const Text("Open Diet"),
                 onTap: () {
                   print("tapped 2");
                   Navigator.pop(context);
                 },
               ),
               ListTile(
-                title: const Text("Menu Item 2"),
+                title: const Text("Go To Home"),
                 onTap: () {
                   print("tapped 2");
                   Navigator.pop(context);
@@ -99,14 +99,6 @@ class _MyNavigationState extends State<MyNavigation> {
                 ),
                 label: "Yoga",
                 backgroundColor: Colors.lightGreen[400]),
-            BottomNavigationBarItem(
-                icon: SizedBox(
-                  child: Image.asset('assets/Icons/meditation.png'),
-                  height: 40,
-                  width: 40,
-                ),
-                label: "Meditate",
-                backgroundColor: Colors.indigo[400]),
             BottomNavigationBarItem(
                 icon: SizedBox(
                   child: Image.asset('assets/Icons/home.png'),
